@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'squibble_carrierwave_attributes/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "squibble_mongoid_fields"
+  spec.name          = "squibble_carrierwave_attributes"
   spec.version       = SquibbleCarrierwaveAttributes::VERSION
   spec.authors       = ["Patrick Lehmann"]
   spec.email         = ["lehmann@squibble.me"]
 
-  spec.summary       = 'Squibble Mongoid Field Types'
-  spec.description   = 'Definition for default mongoid field types to ensure code quality.'
+  spec.summary       = 'Squibble Carrierwave Attributes'
+  spec.description   = 'Definition for default carrierwave attributes to ensure code quality.'
   spec.homepage      = "http://www.squibble.me"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
