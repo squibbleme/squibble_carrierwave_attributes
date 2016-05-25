@@ -34,10 +34,10 @@ module Carrierwave
       def _update_teaser_image_attributes
         if self.class.method_defined?(:teaser_image)
           if teaser_image.present? && teaser_image_changed?
-            self.teaser_image_file_name = file.file.filename
-            self.teaser_image_extension = file.file.extension.downcase
-            self.teaser_image_content_type = file.file.content_type
-            self.teaser_image_file_size = file.file.size
+            self.teaser_image_file_name = teaser_image_changed.file.filename
+            self.teaser_image_extension = teaser_image_changed.file.extension.downcase
+            self.teaser_image_content_type = teaser_image_changed.file.content_type
+            self.teaser_image_file_size = teaser_image_changed.file.size
           end
         end
       end

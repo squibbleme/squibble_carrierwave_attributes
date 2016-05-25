@@ -33,10 +33,10 @@ module Carrierwave
       def _update_raw_file_attributes
         if self.class.method_defined?(:raw_file)
           if raw_file.present? && raw_file_changed?
-            self.raw_file_file_name = file.file.filename
-            self.raw_file_extension = file.file.extension.downcase
-            self.raw_file_content_type = file.file.content_type
-            self.raw_file_file_size = file.file.size
+            self.raw_file_file_name = raw_file.file.filename
+            self.raw_file_extension = raw_file.file.extension.downcase
+            self.raw_file_content_type = raw_file.file.content_type
+            self.raw_file_file_size = raw_file.file.size
           end
         end
       end

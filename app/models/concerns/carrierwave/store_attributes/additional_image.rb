@@ -34,10 +34,10 @@ module Carrierwave
       def _update_additional_image_attributes
         if self.class.method_defined?(:additional_image)
           if additional_image.present? && additional_image_changed?
-            self.additinal_image_file_name = file.file.filename
-            self.additinal_image_extension = file.file.extension.downcase
-            self.additinal_image_content_type = file.file.content_type
-            self.additinal_image_file_size = file.file.size
+            self.additinal_image_file_name = additional_image.file.filename
+            self.additinal_image_extension = additional_image.file.extension.downcase
+            self.additinal_image_content_type = additional_image.file.content_type
+            self.additinal_image_file_size = additional_image.file.size
           end
         end
       end

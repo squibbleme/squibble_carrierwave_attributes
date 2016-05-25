@@ -34,10 +34,10 @@ module Carrierwave
       def _update_portrait_attributes
         if self.class.method_defined?(:portrait)
           if portrait.present? && portrait_changed?
-            self.portrait_file_name = file.file.filename
-            self.portrait_extension = file.file.extension.downcase
-            self.portrait_content_type = file.file.content_type
-            self.portrait_file_size = file.file.size
+            self.portrait_file_name = portrait.file.filename
+            self.portrait_extension = portrait.file.extension.downcase
+            self.portrait_content_type = portrait.file.content_type
+            self.portrait_file_size = portrait.file.size
           end
         end
       end

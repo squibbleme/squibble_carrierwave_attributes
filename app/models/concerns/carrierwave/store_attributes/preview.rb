@@ -35,9 +35,9 @@ module Carrierwave
         if self.class.method_defined?(:preview)
           if preview.present? && preview_changed?
             self.preview_file_name = preview.file.filename
+            self.preview_extension = preview.file.extension.downcase
             self.preview_content_type = preview.file.content_type
             self.preview_file_size = preview.file.size
-            self.preview_file_name = self[:preview]
           end
         end
       end

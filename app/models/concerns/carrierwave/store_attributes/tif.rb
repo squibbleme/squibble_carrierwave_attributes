@@ -33,10 +33,10 @@ module Carrierwave
       def _update_tif_attributes
         if self.class.method_defined?(:tif)
           if tif.present? && tif_changed?
-            self.tif_file_name = file.file.filename
-            self.tif_extension = file.file.extension.downcase
-            self.tif_content_type = file.file.content_type
-            self.tif_file_size = file.file.size
+            self.tif_file_name = tif.file.filename
+            self.tif_extension = tif.file.extension.downcase
+            self.tif_content_type = tif.file.content_type
+            self.tif_file_size = tif.file.size
           end
         end
       end

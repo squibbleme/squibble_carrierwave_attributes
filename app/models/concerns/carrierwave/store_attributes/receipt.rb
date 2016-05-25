@@ -29,10 +29,10 @@ module Carrierwave
       def _update_receipt_attributes
         if self.class.method_defined?(:receipt)
           if receipt.present? && receipt_changed?
-            self.receipt_file_name = file.file.filename
-            self.receipt_extension = file.file.extension.downcase
-            self.receipt_content_type = file.file.content_type
-            self.receipt_file_size = file.file.size
+            self.receipt_file_name = receipt.file.filename
+            self.receipt_extension = receipt.file.extension.downcase
+            self.receipt_content_type = receipt.file.content_type
+            self.receipt_file_size = receipt.file.size
           end
         end
       end

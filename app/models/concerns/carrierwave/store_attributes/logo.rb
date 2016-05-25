@@ -33,10 +33,10 @@ module Carrierwave
       def _update_logo_attributes
         if self.class.method_defined?(:logo)
           if logo.present? && logo_changed?
-            self.logo_file_name = file.file.filename
-            self.logo_extension = file.file.extension.downcase
-            self.logo_content_type = file.file.content_type
-            self.logo_file_size = file.file.size
+            self.logo_file_name = logo.file.filename
+            self.logo_extension = logo.file.extension.downcase
+            self.logo_content_type = logo.file.content_type
+            self.logo_file_size = logo.file.size
           end
         end
       end

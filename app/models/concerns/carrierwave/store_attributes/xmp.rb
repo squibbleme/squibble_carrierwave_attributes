@@ -33,10 +33,10 @@ module Carrierwave
       def _update_xmp_attributes
         if self.class.method_defined?(:xmp)
           if xmp.present? && xmp_changed?
-            self.xmp_file_name = file.file.filename
-            self.xmp_extension = file.file.extension.downcase
-            self.xmp_content_type = file.file.content_type
-            self.xmp_file_size = file.file.size
+            self.xmp_file_name = xmp.file.filename
+            self.xmp_extension = xmp.file.extension.downcase
+            self.xmp_content_type = xmp.file.content_type
+            self.xmp_file_size = xmp.file.size
           end
         end
       end
