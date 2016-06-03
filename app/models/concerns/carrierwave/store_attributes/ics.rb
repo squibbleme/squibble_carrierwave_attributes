@@ -24,7 +24,7 @@ module Carrierwave::StoreAttributes::Ics
   def _update_ics_attributes
     if self.class.method_defined?(:ics)
       if ics.present? && ics_changed?
-        self.ics_file_name = file.file.filename
+        self.ics_file_name = ics.file.filename
         self.ics_content_type = ics.file.content_type
         self.ics_file_size = ics.file.size
         self.ics_extension = ics.file.extension.downcase
