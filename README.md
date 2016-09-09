@@ -9,3 +9,4 @@ Auslagerung der Attribute für die Verwaltung von Carrierwave Uploadern innerhal
 ## Changelog
 
 * 2016-06-16: Adding ```Carrierwave::StoreAttributes::FooterImage``` and ```Carrierwave::StoreAttributes::HeaderImage```
+* 2016-09-09: Hinzufügen der Carrierwave Decorators
